@@ -1,0 +1,12 @@
+#!/bin/bash
+SERVER_PROPERTIES=server.properties
+CRAFTBUKKIT_SERVER_JAR=craftbukkit-betaBuild2175.jar
+
+set -x 
+
+cd $OPENSHIFT_DATA_DIR
+
+if [ ! -e "$CRAFTBUKKIT_SERVER_JAR" ]; then
+	wget "http://spigotmc.info/bukkit/craftbukkit-betaBuild2175.jar" -O $CRAFTBUKKIT_SERVER_JAR
+fi
+
